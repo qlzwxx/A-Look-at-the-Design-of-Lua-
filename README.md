@@ -107,3 +107,15 @@ function genid ()
 end
 ```
 
+加载时，load函数返回一个匿名函数，等价于下面的代码
+
+```lua
+function ()
+    local id = 0
+    function genid ()
+        id = id + 1
+        return id
+    end
+end
+```
+
