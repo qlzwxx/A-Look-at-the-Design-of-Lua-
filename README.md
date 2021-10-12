@@ -143,3 +143,10 @@ print(math.sin(math.pi/6)) --> 0.5
 
                         图2 Lua中的一个简单模块。
 
+一旦在mymodule文件中定义Lua，程序员可以将该模块与下面的代码一起使用
+
+```lua 
+local vec = require "mymodule" print(vec.norm(vec.new(10, 10)))--> 14.142135623731
+```
+
+
