@@ -53,7 +53,7 @@ pi = 4 * math.atan(1)
 ![图1 一个使用Lua库的C程序。](https://dl.acm.org/cms/attachment/0614157f-46e2-43c3-a57b-41646a7d2c31/f1.jpg)
 
                                                            图1 一个使用Lua库的C程序
-这些API调用之间的数据交换是通过Lua状态下的隐式栈完成的。调用luaL _ loadfile将一个函数或一条错误消息压入栈。调用lua_ pcall从栈中弹出函数并调用它。对lua_ getglobal的调用会压入全局变量的值。调用lua_ tonumber将栈顶上的lua值映射到一个double对象上。栈确保这些值在被C代码操作时对Lua保持可见，这样它们就不会被Lua的垃圾收集器收集。除了这个简单示例中使用的函数外，Lua-C API(简称“C API”)还提供了各种操作Lua值的函数，包括将C值(比如数字和字符串)压入栈、调用脚本定义的函数以及设置状态中的变量。
+这些API调用之间的数据交换是通过Lua状态下的隐式栈完成的。调用luaL _ loadfile将一个函数或一条错误消息压入栈。调用lua_ pcall从栈中弹出函数并调用它。对lua_ getglobal的调用会压入全局变量的值。调用lua_ tonumber将栈顶上的lua值投影到一个double值上。栈确保这些值在被C代码操作时对Lua保持可见，这样它们就不会被Lua的垃圾收集器收集。除了这个简单示例中使用的函数外，Lua-C API(简称“C API”)还提供了各种操作Lua值的函数，包括将C值(比如数字和字符串)压入栈、调用脚本定义的函数以及设置状态中的变量。
 
 ## 表
 
